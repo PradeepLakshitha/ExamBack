@@ -53,4 +53,7 @@ public class QuizController {
         category.setCat_id(cat_id);
         return this.quizService.getQuizzesOfCategory(category);
     }
+
+
+
 }

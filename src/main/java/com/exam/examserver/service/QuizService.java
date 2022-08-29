@@ -17,4 +17,8 @@ public interface QuizService {
 
 
     public List<Quiz> getQuizzesOfCategory(Category category);
+
+//    public List<Quiz> getActiveQuizzes();
+
+
 }

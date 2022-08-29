@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
-import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -49,4 +48,11 @@ public class QuizServiceImpl implements QuizService {
     public List<Quiz> getQuizzesOfCategory(Category category) {
         return this.quizRepository.findByCategory(category);
     }
+
+//    @Override
+//    public List<Quiz> getActiveQuizzes() {
+//        return this.quizRepository.findByQuiz_active(true);
+//    }
+
+
 }
