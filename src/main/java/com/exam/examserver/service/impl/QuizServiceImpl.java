@@ -1,5 +1,6 @@
 package com.exam.examserver.service.impl;
 
+import com.exam.examserver.model.exam.Category;
 import com.exam.examserver.model.exam.Quiz;
 import com.exam.examserver.repo.QuizRepository;
 import com.exam.examserver.service.QuizService;
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -41,5 +43,10 @@ public class QuizServiceImpl implements QuizService {
 
 
         this.quizRepository.deleteById(quizId);
+    }
+
+    @Override
+    public List<Quiz> getQuizzesOfCategory(Category category) {
+        return this.quizRepository.findByCategory(category);
     }
 }
