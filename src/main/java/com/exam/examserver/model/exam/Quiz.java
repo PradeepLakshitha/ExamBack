@@ -23,7 +23,8 @@ public class Quiz {
 
     private String quiz_numberOfQuestions;
 
-    private boolean quiz_active = false;
+    @Column(name = "quiz_active")
+    private boolean quizActive = false;
 
     @ManyToOne(fetch = FetchType.EAGER)
     private Category category;
@@ -40,7 +41,7 @@ public class Quiz {
         this.quiz_description = quiz_description;
         this.quiz_maxMarks = quiz_maxMarks;
         this.quiz_numberOfQuestions = quiz_numberOfQuestions;
-        this.quiz_active = quiz_active;
+        this.quizActive = quiz_active;
     }
 
     public Long getQuiz_id() {
@@ -83,12 +84,12 @@ public class Quiz {
         this.quiz_numberOfQuestions = quiz_numberOfQuestions;
     }
 
-    public boolean isQuiz_active() {
-        return quiz_active;
+    public boolean isQuizActive() {
+        return quizActive;
     }
 
-    public void setQuiz_active(boolean quiz_active) {
-        this.quiz_active = quiz_active;
+    public void setQuizActive(boolean quizActive) {
+        this.quizActive = quizActive;
     }
 
     public Category getCategory() {
